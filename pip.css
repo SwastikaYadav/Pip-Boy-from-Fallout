@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+
+body{
+    margin: 2%;
+    color: #15f51a;
+    background: #2f3022;
+    font-family:'Droid Sans',sans-serif;font-weight:700;
+    font-size: 32px;
+    text-transform:uppercase;
+}
+body::after{
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.5), transparent 1px, transparent 2px);
+    opacity: .3;
+    z-index: 100000;
+    pointer-events: none;
+}
+#mainNav{
+    background: #2f3022;
+}
+.navbar{
+    border-bottom: 2px solid;
+}
+.navbar::before, .navbar::after {
+    height: 10px;
+    width: 3px;
+    background:#15f51a;
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: 5000;
+    bottom: -11px;
+
+}
+.navbar-item.active::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 38.5px;
+    top: 36px;
+    background-color:#2f3022;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-top: 2px solid;
+
+}
+
+.navbar::before{
+    left: 0px;
+}
+.navbar::after{
+    right: 0px;
+}
+
+ul > li.nav-item > a.nav-link, ul > li.navbar-item > a.nav-link {
+    color: #15f51a !important;
+    text-align: center;
+}
+.navbar-light .navbar-nav> li.navbar-item.active > .nav-link{
+    z-index: 50;
+    position: relative;
+    background: #2f3022;
+    width: 50%;
+    margin: auto;
+    line-height: 42px;
+}
+
+.navbar-nav {
+    width: 100%;
+    margin-left: 16%;
+    margin-right: 16%;
+    margin-top: -2%;
+}
+
+.navbar-light ul.navbar-nav > li {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.nav.nav-tabs{
+    margin: 2%;
+    border-bottom: none;  
+}
+.nav.nav-tabs> .nav-item > .nav-link:hover{
+    border: 1px solid transparent;
+}
+.nav-item{
+    margin-left: inherit;
+    margin-right: inherit;
+}
+
+.center-image img{
+    margin: auto;
+    display: block;
+    position: relative;
+    max-height: 320px;
+    margin-top: 10;
+    filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(2); 
+
+}
+footer{
+    width: calc(100% - 20px);
+    margin: 20px;
+
+}
